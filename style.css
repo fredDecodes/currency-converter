@@ -29,10 +29,15 @@ body{
 }
 
 .currency-container input{
-  border: 0;
+  border: none;
   background: transparent;
   font-size: 24px;
   text-align: right;
   color: #0f172a;
+}
+
+.exchange-rate{
+  font-size: 18px;
+  font-weight: bold;
 }
 
