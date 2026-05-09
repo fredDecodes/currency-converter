@@ -23,3 +23,6 @@ body{
   justify-content: space-between;
 }
 
+.currency-container select{
+  padding: 10px;
+}
