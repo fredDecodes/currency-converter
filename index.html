@@ -6,6 +6,33 @@
   <title>Currency Converter</title>
 </head>
 <body>
-  
+  <div class="container">
+    <h1>Currency Converter</h1>
+    <div class="currency-container">
+      <select id="currency-menu1">
+        <option value="AUD">AUD</option>
+        <option value="CAD">CAD</option>
+        <option value="EUR">EUR</option>
+        <option value="GBP">GBP</option>
+        <option value="INR">INR</option>
+        <option value="JPY">JPY</option>
+        <option value="USD" selected>USD</option>
+      </select>
+      <input type="number" id="menu1-value" value="1" min="0">
+    </div>
+    <div class="currency-container">
+      <select id="currency-menu2">
+        <option value="AUD">AUD</option>
+        <option value="CAD">CAD</option>
+        <option value="EUR" selected>EUR</option>
+        <option value="GBP">GBP</option>
+        <option value="INR">INR</option>
+        <option value="JPY">JPY</option>
+        <option value="USD">USD</option>
+      </select>
+      <input type="number" id="menu2-value" disabled>
+    </div>
+    <p class="exchange-rate" id="exchange-rate">To Be Updated Dynamically</p>
+  </div>
 </body>
 </html>
