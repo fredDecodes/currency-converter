@@ -26,3 +26,12 @@ body{
 .currency-container select{
   padding: 10px;
 }
+
+.currency-container input{
+  border: 0;
+  background: transparent;
+  font-size: 24px;
+  text-align: right;
+  color: #0f172a;
+}
+
