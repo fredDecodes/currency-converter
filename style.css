@@ -1,11 +1,19 @@
 body{
   margin: 0;
   padding: 0;
-  background-color: skyblue;
+  background-color: #87ceeb;
   display: flex;
   height: 100vh;
   justify-content: center;
   align-items: center;
   font-family: 'Courier New', Courier, monospace;
+}
+
+.container{
+  background-color: #f8fafc;
+  color: #0f172a;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
 }
 
