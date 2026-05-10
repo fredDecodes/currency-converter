@@ -4,9 +4,16 @@ const currencyMenu2El = document.getElementById('currency-menu2');
 const menu2Value = document.getElementById('menu2-value');
 const exchangeRateEl = document.getElementById('exchange-rate');
 
+updateExchangeRate();
+
 function updateExchangeRate() {
-  console.log('Called');
-  
+  fetch(`https://v6.exchangerate-api.com/v6/cf40f2d2e7e157ad6fca4fa6/latest/${currencyMenu1El.value}`)
+    .then((res) => res.json())
+    .then((data) => {
+      const exchangeRate = data.conversion_rates[currencyMenu2El.value];
+      exchangeRateEl.innerText = `1 ${currencyMenu1El.value} = ${exchangeRate} ${currencyMenu2El.value}`;
+      menu2Value.value = (menu1Value.value * exchangeRate).toFixed(2);
+  });
 }
 
 currencyMenu1El.addEventListener('change', updateExchangeRate);
