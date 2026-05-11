@@ -4,10 +4,12 @@ const currencyMenu2El = document.getElementById('currency-menu2');
 const menu2Value = document.getElementById('menu2-value');
 const exchangeRateEl = document.getElementById('exchange-rate');
 
+const API_URL = `https://v6.exchangerate-api.com/v6/${CONFIG.API_KEY}/latest`;
+
 updateExchangeRate();
 
 function updateExchangeRate() {
-  fetch(`${currencyMenu1El.value}`)
+  fetch(`${API_URL}/${currencyMenu1El.value}`)
     .then((res) => res.json())
     .then((data) => {
       const exchangeRate = data.conversion_rates[currencyMenu2El.value];
